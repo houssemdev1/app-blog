@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="#">Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/listearticle"><i class="fa fa-home fa-fw"></i>Aceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/myblogs" class='active-page'><i class="fa fa-book fa-fw" ></i>Mes articles</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/ajoutarticle"> <i class="fa fa-plus"></i>Ajouter article</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-snapchat-ghost"></i>  Notification({{currentmessages$?.length}})
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/desablearticles/{{item._id}} "(click)= "save_id_art(item._id)" *ngFor="let item of currentmessages$">Votre article {{item.messageContent}}a été publié<br></a>
+          </div>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-user">  </i>Profil
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Modifier profil</a>
+          <a class="dropdown-item" href="#"(click)="logout()">Déconnexion</a>
+  </div>
+      </li>
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" [(ngModel)]="searchKeyword" type="search" name="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </div>
+</nav>
+  <!--card articles-->
+  <div id="section1"*ngFor="let item of blogs$ | searchpipe:searchKeyword">
+  <div class="card mb-3">
+    <img src="{{ item.articleImg}}" class="card-img-top" alt="...">
+    <div id="group" class="card-body"> 
+      <h5 class="card-title"[innerHTML]="item.articleTitle">{{ item.articleTitle}}</h5>
+      <p class="card-text"[innerHTML]="item.articleContent">{{ item.articleContent}}</p>
+      <p id="date" class="card-text"><small class="text-muted"> 
+        Creé par:&nbsp;{{item.nomAuthor}} &nbsp;{{item.prenomAuthor}} &nbsp; &nbsp; &nbsp;Date de publication:&nbsp; {{item.articleDate |date }}</small></p>
+    </div>
+    <div class="form-group">
+        <h5 class="card-title">&nbsp;&nbsp;Commentaires</h5>
+        <div *ngFor="let item of blogs$.articleComments">
+        <p class="card-text"  >{{item.nomAuthor}} {{item.prenomAuthor}}</p>
+        <p class="card-text" *ngFor="let item of blogs$.articleComments">{{item.commentContent}}</p>
+        <p class="card-text" *ngFor="let item of blogs$.articleComments">{{item.commentDate |date}}</p>
+      </div>
+      </div>
+     </div>
+  </div>
+  
+   

@@ -1,0 +1,34 @@
+#info{
+    margin-left: 70%
+}
+#routerlink{
+    margin-left: 70%;
+    color: red
+}
+textarea{
+    float: left;
+    width: 70%
+}
+#btn{
+    margin-left: 5%
+}
+#cmt{
+    float: left;
+}
+.active-page{
+    color: blue
+}
+i{
+   margin-left: 3%
+}
+#section1{
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+h5{
+    color: rgb(77, 77, 252)
+}
+h6{
+    color: darkorange
+}

@@ -1,0 +1,60 @@
+<div id="back">
+  <div class="backRight"></div>
+  <div class="backLeft"></div>
+</div>
+
+<div id="slideBox">
+  <div class="topLayer">
+    <div class="left">
+      <div class="content">
+        <h2>Sign Up</h2>
+        <form method="post" onsubmit="return false;">
+          <div class="form-group">
+            <input type="text" placeholder="username" />
+          </div>
+          <div class="form-group"></div>
+          <div class="form-group"></div>
+          <div class="form-group"></div>
+        </form>
+        <button id="goLeft" class="off">Login</button>
+        <button>Sign up</button>
+      </div>
+    </div>
+    <div class="right">
+      <div class="content">
+			
+  
+
+      <div id="forme" >
+      
+        <h1>Se connecter</h1>
+        <br><br>
+        <div>
+  
+          <label for="mail">Email:</label>
+          <form [formGroup]="formlogin">
+					<input type="text"  class="form-control" formControlName="userEmail" placeholder="Entrer votre adresse email" aria-label="Entrer votre adresse email" aria-describedby="addon-wrapping">
+        </form>
+
+        <br>
+          <label for="password">Mot de passe:</label>
+          <form [formGroup]="formlogin">
+          <input type="password" class="form-control" formControlName="userPassword" placeholder="Entrer votre ot de passe" aria-label="Username" aria-describedby="addon-wrapping">
+
+        </form>
+             </div>
+             <br><br>
+        
+       <div>
+			
+				<button type="button" class="btn btn-success"(click)="verif()">Connexion</button>
+			</div>
+				<div id="createaccount">
+					<a><h5>Vous n'avez pas un compte!</h5></a><br>
+				<a  routerLink="/register"><h5>Creer en-un</h5></a>
+			</div>
+			<div id="createaccountt"></div>
+      </div>
+  </div>
+</div>
+</div></div>

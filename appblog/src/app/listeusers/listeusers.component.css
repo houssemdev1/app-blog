@@ -1,0 +1,22 @@
+button{
+    width: 208px
+}
+h1{
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.active-page{
+    color: blue
+}
+i{
+   margin-left: 3%
+}
+
+#row{
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+#cardd{
+    margin-top: 5%
+}

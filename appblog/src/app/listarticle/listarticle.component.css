@@ -1,0 +1,24 @@
+#section1{
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 70%;
+    max-height: 10%
+    
+}
+img{
+    width: 100%;
+    height: 10%;
+}
+
+#col{
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.active-page{
+    color: blue
+}
+i{
+   margin-left: 3%
+}

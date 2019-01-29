@@ -1,0 +1,66 @@
+#conteneur{
+ /*   background: rgb(236, 197, 137);*/
+ background:white;
+    width: 50%;
+    height: 40%;
+    margin-left: 27%;
+    z-index: 2;
+    margin-top: 7%;
+    padding: 2%;
+    border-radius: 4%
+}
+.form-control{
+    border-radius: 2%
+}
+a{
+    padding-left: 12px;
+}
+#btn{
+    display:inline-block;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 4%
+}
+#exampleFormControlFile1{
+display: inline-block;
+}
+
+textarea{
+    margin-top: 2%
+}
+
+.form-group{
+    margin-top: 3%
+}
+
+.active-page{
+    color: blue
+}
+i{
+   margin-left: 3%
+}
+
+.header {  
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .html-header {
+    margin: 15px 0 5px;
+  }
+  
+  .html {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color:white;
+    min-height: 20px;
+    max-height: 10rem;
+    overflow: auto;
+  }
+
+  #f1{
+      background: white;
+      margin: 2%
+  }

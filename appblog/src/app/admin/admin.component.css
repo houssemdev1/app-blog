@@ -1,0 +1,68 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  h3{
+    color:rgb(224, 71, 71);
+  }
+
+/*section*/
+#sectionarticle{
+   margin-left: 10%;
+   margin-right: 10%;
+   height: 200px
+}
+
+  /*card*/
+
+  
+.btn-primary:hover,
+.btn-primary:focus {
+ 
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+ 
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+ 
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+ 
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.active-page{
+    color: blue
+}
+i{
+   margin-left: 3%
+}

@@ -1,0 +1,270 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    width: 100% !important;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+  #ttl{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  .backRight {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: auto;
+    background: #3498db url(https://download.unsplash.com/photo-1429041966141-44d228a42775);
+    background-size: cover;
+    
+  }
+  #inp{
+    width: 350px;
+  }
+  
+  .backLeft {
+    position: absolute;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: url(https://www.audaxis.com/wp-content/uploads/2016/08/audaxis-blog-background-image.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  #back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+  }
+  
+  #slideBox {
+    width: 50%;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 50%;
+    position: absolute;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .topLayer {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    left: -100%;
+  }
+  
+  .left {
+    width: 70%;
+    height: 100%;
+  
+    left: 0;
+    position: absolute;
+  }
+  
+  .right {
+    width: 30%;
+    height: 100%;
+    background: #f9f9f9;
+    right: 0;
+    position: absolute;
+  }
+  
+  .content {
+    width: 250px;
+    margin: 0 auto;
+   
+    position: absolute;
+    left: 50%;
+    margin-left: -185px;
+  }
+  
+  .content h2 {
+    color: #03A9F4;
+    font-weight: 300;
+    font-size: 35px;
+  }
+  
+ 
+  
+  .right .off:hover {
+    background: #eee;
+    color: #03A9F4;
+    box-shadow: none;
+  }
+  .left .off:hover {
+    box-shadow: none;
+    color: #03A9F4;
+    background: #363A3D;
+  }
+  input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #45494C;
+    font-size: 14px;
+    color: #959595;
+    padding: 8px 0;
+    margin-top: 20px;
+  }
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+  
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+  }
+  
+  
+  /*---------------------------------------------*/
+  a {
+      font-family: Poppins-Regular;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666666;
+      margin: 0px;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  
+  a:focus {
+      outline: none !important;
+  }
+  
+  a:hover {
+      text-decoration: none;
+  }
+  
+  /*---------------------------------------------*/
+  h1,h2,h3,h4,h5,h6 {
+      margin: 0px;
+  }
+  
+  p {
+      font-family: Poppins-Regular;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666666;
+      margin: 0px;
+  }
+  
+  ul, li {
+      margin: 0px;
+      list-style-type: none;
+  }
+  
+  
+  /*---------------------------------------------*/
+  input {
+      outline: none;
+      border: none;
+  }
+  
+  input[type="number"] {
+      -moz-appearance: textfield;
+      appearance: none;
+      -webkit-appearance: none;
+  }
+  
+  
+  
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  #forme {
+    width: 150%;
+    margin: 1px auto;
+    padding: 2px 10px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  
+input{
+   background-color: white;
+   margin-top: 2%
+}
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+    margin-top: 3%
+  }
+  
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+  button{
+      width: 60%;
+      margin-top: 3%;
+      margin-left: 20%
+  }
+  fieldset {
+    margin-bottom: 15px;
+    border: none;
+  }
+  
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 2px;
+  
+  }
+  #legend{
+    margin-top: 4%
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 3%
+  }
+  
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+  .number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+  
+  @media screen and (min-width: 480px) {
+  
+    form {
+      max-width: 200px;
+      max-height: 200px
+    }
+  
+  }

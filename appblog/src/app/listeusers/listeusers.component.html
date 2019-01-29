@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dashboard"><i class="fa fa-home fa-fw"></i>Aceuil <span class="sr-only">(current)</span></a>
+            </li>
+        
+         
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/users"class="active-page"> <i class="fa fa-users"></i>Membres</a>
+                </li>
+    
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-snapchat-ghost"></i>  Notification({{recentarticles$?.length}})
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="/desablearticles/{{item._id}} "(click)= "save_id_art(item._id)" *ngFor="let item of recentarticles$">{{item?.nomAuthor}} {{item?.prenomAuthor}}<br> demande la publication de l'article:{{item?.articleTitle}}</a>
+                  </div>
+                </li>
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-fw fa-user">  </i>Profil
+              </a>
+             
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Modifier profil</a>
+                <a class="dropdown-item" routerLink="/login"(click)="logout()">Déconnexion</a>
+        </div>
+            </li>
+          
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" [(ngModel)]="searchText" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+      </nav>
+    
+    
+<div id="sectionusers">
+ 
+
+
+      <h5 class="section-title h1">OUR TEAM</h5>
+      <div id="row" class="row">
+       
+          <div id="cardd"class="col-xs-12 col-sm-6 col-md-4"*ngFor="let item of users$|filter:searchText">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center" >
+                                    <p><img class=" img-fluid" src="data:image/jpeg;base64,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" alt="card image"></p> 
+                                  <h4 class="card-title">Nom:</h4><h6>{{item.userName}} </h6>
+                                  <h4 class="card-title">Prenom:</h4><h6>{{item.userLastname}}</h6>
+                                  <h4 class="card-title"> Email:</h4><h6>{{item.userEmail}}</h6>
+                                  
+                                  <button type="button" class="btn btn-danger" (click)="deleteUsers(item._id)">Supprimer</button>
+                              </div>
+                          </div>
+                      </div>
+                 
+                  </div>
+              </div>
+          </div>
+  
+  
+
+      </div>
+  </div>
+
+
+

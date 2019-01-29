@@ -1,0 +1,73 @@
+<div id="back">
+  <div class="backRight"></div>
+  <div class="backLeft"></div>
+</div>
+
+<div id="slideBox">
+  <div class="topLayer">
+    <div class="left">
+      <div class="content">
+        <h2>Sign Up</h2>
+        <form method="post" onsubmit="return false;">
+          <div class="form-group">
+            <input type="text" placeholder="username" />
+          </div>
+         
+          <div class="form-group"></div>
+        </form>
+        <button id="goLeft" class="off">Login</button>
+        <button>Sign up</button>
+      </div>
+    </div>
+    <div class="right">
+      <div class="content">
+			
+  
+
+      <div id="forme" >
+      
+        <h1>Inscription</h1>
+        
+        <div>
+          <legend><span class="number"id="ttl">1</span>Vos infos basiques</legend>
+          <form [formGroup]="formregister">
+          <label for="name">Nom:</label>
+					<input id="inp" type="text"  formControlName="userName" class="form-control" placeholder="Entrer votre nom" aria-label="Entrer votre adresse email" aria-describedby="addon-wrapping">
+</form>
+<form [formGroup]="formregister">
+					<label for="name">Prenom:</label>
+        	<input id="inp" type="text"  formControlName="userLastname"  class="form-control" placeholder="Entrer votre prenom" aria-label="Entrer votre adresse email" aria-describedby="addon-wrapping">
+</form>
+<form [formGroup]="formregister">
+          <label for="mail">Email:</label>
+          <input id="inp" type="text"  formControlName="userEmail" class="form-control" placeholder="Entrer votre adresse email" aria-label="Entrer votre adresse email" aria-describedby="addon-wrapping">
+</form>
+<form [formGroup]="formregister">
+          <label for="password">Mot de passe:</label>
+           <input id="inp" type="password"  formControlName="userPassword" class="form-control" placeholder="Entrer votre mot de passe" aria-label="Entrer votre adresse email" aria-describedby="addon-wrapping">
+ </form>
+             </div>
+        <fieldset>
+       <div id="legend">   <legend><span class="number"id="ttl">2</span>Votre profil</legend></div>
+     
+          <input type="radio" id="under_13" value="Administrateur" name="profil" [(ngModel)]="profil"><label for="under_13"  class="light">Administrateur</label><br>
+          <input type="radio" id="over_13" value="Utilisateur"   [(ngModel)]="profil" name="profil" ><label for="over_13"  class="light" >Utilisateur</label>
+     
+        </fieldset>
+
+        <div>
+			
+            <button type="button" class="btn btn-success"(click)="register()">S'inscrir</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--Inspiration from: http://ertekinn.com/loginsignup/-->
+
+
+
+
+  
+
+    

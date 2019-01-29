@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="#">Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/listearticle"><i class="fa fa-home fa-fw"></i>Aceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/myblogs"><i class="fa fa-book fa-fw" ></i>Mes articles</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/ajoutarticle" class='active-page'> <i class="fa fa-plus"></i>Ajouter article</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-snapchat-ghost"></i>  Notification({{currentmessages$?.length}})
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/desablearticles/{{item._id}} "(click)= "save_id_art(item._id)" *ngFor="let item of currentmessages$">Votre article {{item.messageContent}}a été publié<br></a>
+          </div>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-user">  </i>Profil
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Modifier profil</a>
+          <a class="dropdown-item" href="#"(click)="logout()">Déconnexion</a>
+  </div>
+      </li>
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </div>
+</nav>
+<div id="conteneur">
+
+    <form [formGroup]="formearticle">
+      <textarea class="form-control" formControlName= "articleTitle" rows="1" placeholder="Entrer le titre..." id="comment"></textarea>
+      <angular-editor id="f1" formControlName="articleContent" [config]="config2">  </angular-editor>
+ 
+          <div class="form-group">
+           <label for="exampleFormControlFile1"><h5>Ajouter une image</h5></label>
+            <input type="file"  (change)="changeListener($event)" class="form-control-file"  formControlName="articleImg" id="exampleFormControlFile1">
+             </div>
+            </form>
+             <button id="btn"class="btn btn-primary"  type="submit"(click)="addArticle()">Publier</button>
+     
+</div> 
